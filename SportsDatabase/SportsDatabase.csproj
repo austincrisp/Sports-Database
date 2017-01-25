@@ -33,7 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -43,11 +52,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201701251850454_Temp.cs" />
+    <Compile Include="Migrations\201701251850454_Temp.Designer.cs">
+      <DependentUpon>201701251850454_Temp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701251932493_AddTeamNameToTeams.cs" />
+    <Compile Include="Migrations\201701251932493_AddTeamNameToTeams.Designer.cs">
+      <DependentUpon>201701251932493_AddTeamNameToTeams.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701252016488_AddColumnsToTeam.cs" />
+    <Compile Include="Migrations\201701252016488_AddColumnsToTeam.Designer.cs">
+      <DependentUpon>201701252016488_AddColumnsToTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701252045220_AddColumnsToPlayer.cs" />
+    <Compile Include="Migrations\201701252045220_AddColumnsToPlayer.Designer.cs">
+      <DependentUpon>201701252045220_AddColumnsToPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701252048314_DropHeightFromPlayer.cs" />
+    <Compile Include="Migrations\201701252048314_DropHeightFromPlayer.Designer.cs">
+      <DependentUpon>201701252048314_DropHeightFromPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201701252112214_FixedPropertiesInClasses.cs" />
+    <Compile Include="Migrations\201701252112214_FixedPropertiesInClasses.Designer.cs">
+      <DependentUpon>201701252112214_FixedPropertiesInClasses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="PlayerStatContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\Stat.cs" />
+    <Compile Include="Models\Team.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201701251850454_Temp.resx">
+      <DependentUpon>201701251850454_Temp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701251932493_AddTeamNameToTeams.resx">
+      <DependentUpon>201701251932493_AddTeamNameToTeams.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701252016488_AddColumnsToTeam.resx">
+      <DependentUpon>201701252016488_AddColumnsToTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701252045220_AddColumnsToPlayer.resx">
+      <DependentUpon>201701252045220_AddColumnsToPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701252048314_DropHeightFromPlayer.resx">
+      <DependentUpon>201701252048314_DropHeightFromPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701252112214_FixedPropertiesInClasses.resx">
+      <DependentUpon>201701252112214_FixedPropertiesInClasses.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
